@@ -144,10 +144,11 @@ class PeriodicEventRelativeSensor(PeriodicEventSensor):
         super()._update_internal_state(now)
 
         # Compute the human-readable text between today and the next event
-        naturalisation = duration(self._next_event,
-                                  now=now.date(),
-                                  precision=2)
-        if naturalisation == 'just now'  \
-                or naturalisation.startswith('0 seconds'):
-            naturalisation = 'Today'
-        self._state = naturalisation
+        today = dt_util.as_local(now).date()
+        difference = self._next_event - today
+        if (difference.days == 0):
+            self._state = 'Today'
+        elif (difference.days == 1):
+            self._state = 'Tomorrow'
+        else:
+            self._state = duration(self._next_event, now=today, precision=2)
