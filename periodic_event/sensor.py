@@ -11,9 +11,6 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 
 
-# XXX This is required vs manifest.json
-REQUIREMENTS = ['python-dateutil', 'natural==0.2.0']
-
 CONF_EPOCH = 'epoch'
 CONF_FREQUENCY = 'frequency'
 
