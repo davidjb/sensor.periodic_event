@@ -1,9 +1,9 @@
 {
   "domain": "periodic_event",
+  "version": "1.0.0",
   "name": "Periodic Event",
   "documentation": "https://github.com/davidjb/sensor.periodic_event",
   "dependencies": [],
   "codeowners": ["davidjb"],
   "requirements": ["python-dateutil", "natural==0.2.0"]
 }
-
