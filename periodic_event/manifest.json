@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "name": "Periodic Event",
   "documentation": "https://github.com/davidjb/sensor.periodic_event",
+  "issue_tracker": "https://github.com/davidjb/sensor.periodic_event/issues",
   "dependencies": [],
   "codeowners": ["davidjb"],
   "requirements": ["python-dateutil", "natural==0.2.0"]
